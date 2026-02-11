@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✦ KAREH ✦ DIMENSIONAL LOVE PORTAL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Parisienne&family=Syncopate:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- AUDIO DIMENSION -->
+    <audio id="cosmicAudio" loop crossorigin="anonymous">
+        <source src="music/Stephen Sanchez - Until I Found You (Official Video) - StephenSanchezVEVO.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- AUDIO VISUALIZER CANVAS -->
+    <canvas id="audioVisualizer"></canvas>
+
+    <!-- PARTICLE SYSTEM LAYERS -->
+    <canvas id="particleLayer1"></canvas>
+    <canvas id="particleLayer2"></canvas>
+    <canvas id="particleLayer3"></canvas>
+
+    <!-- 3D WEBGL BACKGROUND -->
+    <canvas id="webglBackground"></canvas>
+
+    <!-- FLOATING UI ELEMENTS -->
+    <div class="floating-dimension" id="dimension1">∞</div>
+    <div class="floating-dimension" id="dimension2">♥</div>
+    <div class="floating-dimension" id="dimension3">✦</div>
+
+    <!-- NAVIGATION (HOLOGRAPHIC) -->
+    <nav class="holo-nav">
+        <div class="nav-orb" data-section="singularity">
+            <span class="orb-glyph">◉</span>
+            <span class="orb-label">SINGULARITY</span>
+        </div>
+        <div class="nav-orb" data-section="chronicles">
+            <span class="orb-glyph">◈</span>
+            <span class="orb-label">CHRONICLES</span>
+        </div>
+        <div class="nav-orb" data-section="multiverse">
+            <span class="orb-glyph">◊</span>
+            <span class="orb-label">MULTIVERSE</span>
+        </div>
+        <div class="nav-orb" data-section="transmission">
+            <span class="orb-glyph">◉</span>
+            <span class="orb-label">TRANSMISSION</span>
+        </div>
+        <div class="nav-orb" data-section="eternity">
+            <span class="orb-glyph">✦</span>
+            <span class="orb-label">ETERNITY</span>
+        </div>
+    </nav>
+
+    <!-- AUDIO CONTROL (CRYSTAL) -->
+    <button class="crystal-audio" id="audioCrystal">
+        <div class="crystal-inner">
+            <span class="crystal-icon">♫</span>
+            <div class="crystal-waves"></div>
+        </div>
+    </button>
+
+    <!-- SCROLL PROGRESS (ENERGY BEAM) -->
+    <div class="energy-beam">
+        <div class="beam-core"></div>
+        <div class="beam-particles"></div>
+    </div>
+
+    <!-- SECTION 1: THE SINGULARITY (HERO) -->
+    <section id="singularity" class="dimensional-section singularity">
+        <div class="singularity-core">
+            <div class="core-rings">
+                <div class="ring ring-1"></div>
+                <div class="ring ring-2"></div>
+                <div class="ring ring-3"></div>
+                <div class="ring ring-4"></div>
+                <div class="ring ring-5"></div>
+            </div>
+            
+            <div class="singularity-content">
+                <div class="title-constellation">
+                    <span class="constellation-star" style="--delay:0s">✦</span>
+                    <span class="constellation-star" style="--delay:0.2s">✦</span>
+                    <span class="constellation-star" style="--delay:0.4s">✦</span>
+                </div>
+                
+                <h1 class="singularity-title">
+                    <span class="title-layer layer-back">KAREH</span>
+                    <span class="title-layer layer-mid">KAREH</span>
+                    <span class="title-layer layer-front">KAREH</span>
+                </h1>
+                
+                <div class="singularity-subtitle">
+                    <span class="subtitle-fragment" style="--i:1">K</span>
+                    <span class="subtitle-fragment" style="--i:2">A</span>
+                    <span class="subtitle-fragment" style="--i:3">R</span>
+                    <span class="subtitle-fragment" style="--i:4">E</span>
+                    <span class="subtitle-fragment" style="--i:5">H</span>
+                </div>
+                
+                <div class="singularity-deco">
+                    <span class="deco-line"></span>
+                    <span class="deco-orb">◉</span>
+                    <span class="deco-line"></span>
+                </div>
+                
+                <p class="singularity-manifesto">
+                    A being of such luminous perfection that reality itself bends in her presence
+                </p>
+                
+                <div class="singularity-sigil">
+                    <span class="sigil-ring outer"></span>
+                    <span class="sigil-ring inner"></span>
+                    <span class="sigil-core">E♥K</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dimensional-portal portal-left"></div>
+        <div class="dimensional-portal portal-right"></div>
+    </section>
+
+    <!-- SECTION 2: TEMPORAL CHRONICLES -->
+    <section id="chronicles" class="dimensional-section chronicles">
+        <div class="chronicles-header">
+            <h2 class="section-cosmic-title">
+                <span class="cosmic-word">TEMPORAL</span>
+                <span class="cosmic-glyph">◈</span>
+                <span class="cosmic-word">CHRONICLES</span>
+            </h2>
+        </div>
+        
+        <div class="timeline-vortex">
+            <div class="vortex-center"></div>
+            
+            <div class="timeline-event" data-year="2023">
+                <div class="event-wormhole">
+                    <div class="wormhole-ring"></div>
+                    <div class="wormhole-core">01</div>
+                </div>
+                <div class="event-content">
+                    <h3>THE CONVERGENCE</h3>
+                    <p>Two souls recognized each other across the infinite expanse. Time held its breath.</p>
+                    <div class="event-coords">∞.∞.∞</div>
+                </div>
+            </div>
+            
+            <div class="timeline-event" data-year="2023">
+                <div class="event-wormhole">
+                    <div class="wormhole-ring"></div>
+                    <div class="wormhole-core">02</div>
+                </div>
+                <div class="event-content">
+                    <h3>THE RESONANCE</h3>
+                    <p>First words exchanged. Frequencies aligned. The universe whispered: "Yes."</p>
+                    <div class="event-coords">♡.♡.♡</div>
+                </div>
+            </div>
+            
+            <div class="timeline-event" data-year="2024">
+                <div class="event-wormhole">
+                    <div class="wormhole-ring"></div>
+                    <div class="wormhole-core">03</div>
+                </div>
+                <div class="event-content">
+                    <h3>THE ENTANGLEMENT</h3>
+                    <p>Quantum states merged. To think of one is to summon the other instantly.</p>
+                    <div class="event-coords">⚛.⚛.⚛</div>
+                </div>
+            </div>
+            
+            <div class="timeline-event" data-year="∞">
+                <div class="event-wormhole">
+                    <div class="wormhole-ring"></div>
+                    <div class="wormhole-core">∞</div>
+                </div>
+                <div class="event-content">
+                    <h3>THE ETERNAL NOW</h3>
+                    <p>All moments exist simultaneously. Past, present, future—united in love.</p>
+                    <div class="event-coords">✦.✦.✦</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: MULTIVERSE GALLERY -->
+    <section id="multiverse" class="dimensional-section multiverse">
+        <div class="multiverse-header">
+            <h2 class="section-cosmic-title">
+                <span class="cosmic-word">MULTIVERSE</span>
+                <span class="cosmic-glyph">◊</span>
+                <span class="cosmic-word">GALLERY</span>
+            </h2>
+            <p class="multiverse-subtitle">All possible versions of her beauty, collapsed into this dimension</p>
+        </div>
+        
+        <div class="dimensional-grid">
+            <!-- PHOTO 1: THE ORIGIN -->
+            <div class="reality-tile" data-reality="origin">
+                <div class="tile-dimensions">
+                    <div class="dim-layer layer-a"></div>
+                    <div class="dim-layer layer-b"></div>
+                    <div class="dim-layer layer-c"></div>
+                </div>
+                <div class="tile-content">
+                    <div class="photo-singularity">
+                        <img src="images/WhatsApp Image 2026-02-12 at 12.01.26 AM.jpeg" alt="Kareh - Origin" class="photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="background: radial-gradient(circle at 30% 30%, #ff006e, #8338ec, #3a86ff); display: none;">
+                            <span>KAREH.ORIGIN</span>
+                        </div>
+                    </div>
+                    <div class="tile-info">
+                        <h3>REALITY: ORIGIN</h3>
+                        <p>Where it all began. The source code of perfection.</p>
+                        <div class="reality-sigil">◉</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 2: THE GOLDEN AGE -->
+            <div class="reality-tile" data-reality="golden">
+                <div class="tile-dimensions">
+                    <div class="dim-layer layer-a"></div>
+                    <div class="dim-layer layer-b"></div>
+                    <div class="dim-layer layer-c"></div>
+                </div>
+                <div class="tile-content">
+                    <div class="photo-singularity">
+                        <img src="images/WhatsApp Image 2026-02-12 at 12.02.45 AM.jpeg" alt="Kareh - Golden Age" class="photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="background: radial-gradient(circle at 70% 30%, #ffd700, #ff006e, #ffbe0b); display: none;">
+                            <span>KAREH.AUREATE</span>
+                        </div>
+                    </div>
+                    <div class="tile-info">
+                        <h3>REALITY: AUREATE</h3>
+                        <p>She walks in gold. Light itself bows before her.</p>
+                        <div class="reality-sigil">✦</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 3: THE ETHEREAL -->
+            <div class="reality-tile" data-reality="ethereal">
+                <div class="tile-dimensions">
+                    <div class="dim-layer layer-a"></div>
+                    <div class="dim-layer layer-b"></div>
+                    <div class="dim-layer layer-c"></div>
+                </div>
+                <div class="tile-content">
+                    <div class="photo-singularity">
+                        <img src="images/WhatsApp Image 2026-02-12 at 12.02.46 AM.jpeg" alt="Kareh - Ethereal" class="photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="background: radial-gradient(circle at 50% 50%, #a2d2ff, #cdb4db, #ffc8dd); display: none;">
+                            <span>KAREH.ETHEREAL</span>
+                        </div>
+                    </div>
+                    <div class="tile-info">
+                        <h3>REALITY: ETHEREAL</h3>
+                        <p>Not of this world. A visitor from higher planes.</p>
+                        <div class="reality-sigil">◊</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 4: THE NOCTURNAL -->
+            <div class="reality-tile" data-reality="nocturnal">
+                <div class="tile-dimensions">
+                    <div class="dim-layer layer-a"></div>
+                    <div class="dim-layer layer-b"></div>
+                    <div class="dim-layer layer-c"></div>
+                </div>
+                <div class="tile-content">
+                    <div class="photo-singularity">
+                        <img src="images/WhatsApp Image 2026-02-12 at 12.02.52 AM.jpeg" alt="Kareh - Nocturnal" class="photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="background: radial-gradient(circle at 30% 70%, #240046, #3c096c, #7b2cbf); display: none;">
+                            <span>KAREH.NOCTURNE</span>
+                        </div>
+                    </div>
+                    <div class="tile-info">
+                        <h3>REALITY: NOCTURNE</h3>
+                        <p>Queen of the infinite night. Stars orbit her dreams.</p>
+                        <div class="reality-sigil">◈</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 5: THE SOLAR -->
+            <div class="reality-tile" data-reality="solar">
+                <div class="tile-dimensions">
+                    <div class="dim-layer layer-a"></div>
+                    <div class="dim-layer layer-b"></div>
+                    <div class="dim-layer layer-c"></div>
+                </div>
+                <div class="tile-content">
+                    <div class="photo-singularity">
+                        <img src="images/WhatsApp Image 2026-02-12 at 12.02.52 AM (1).jpeg" alt="Kareh - Solar" class="photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="background: radial-gradient(circle at 50% 20%, #ffbe0b, #fb5607, #ff006e); display: none;">
+                            <span>KAREH.SOLAR</span>
+                        </div>
+                    </div>
+                    <div class="tile-info">
+                        <h3>REALITY: SOLAR</h3>
+                        <p>She is the sun. All life turns toward her warmth.</p>
+                        <div class="reality-sigil">☉</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 6: THE LUNAR -->
+            <div class="reality-tile" data-reality="lunar">
+                <div class="tile-dimensions">
+                    <div class="dim-layer layer-a"></div>
+                    <div class="dim-layer layer-b"></div>
+                    <div class="dim-layer layer-c"></div>
+                </div>
+                <div class="tile-content">
+                    <div class="photo-singularity">
+                        <img src="images/WhatsApp Image 2026-02-12 at 12.02.53 AM.jpeg" alt="Kareh - Lunar" class="photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="background: radial-gradient(circle at 50% 80%, #e0e1dd, #778da9, #415a77); display: none;">
+                            <span>KAREH.LUNAR</span>
+                        </div>
+                    </div>
+                    <div class="tile-info">
+                        <h3>REALITY: LUNAR</h3>
+                        <p>Silver mysteries. Tides of the heart obey her phases.</p>
+                        <div class="reality-sigil">☽</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 7: THE PRIMORDIAL -->
+            <div class="reality-tile" data-reality="primordial">
+                <div class="tile-dimensions">
+                    <div class="dim-layer layer-a"></div>
+                    <div class="dim-layer layer-b"></div>
+                    <div class="dim-layer layer-c"></div>
+                </div>
+                <div class="tile-content">
+                    <div class="photo-singularity">
+                        <img src="images/WhatsApp Image 2026-02-12 at 12.02.54 AM.jpeg" alt="Kareh - Primordial" class="photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="background: radial-gradient(circle at 40% 40%, #2d6a4f, #40916c, #52b788); display: none;">
+                            <span>KAREH.PRIMAL</span>
+                        </div>
+                    </div>
+                    <div class="tile-info">
+                        <h3>REALITY: PRIMAL</h3>
+                        <p>Before time. Before form. The essence of life itself.</p>
+                        <div class="reality-sigil">❋</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 8: THE CELESTIAL -->
+            <div class="reality-tile" data-reality="celestial">
+                <div class="tile-dimensions">
+                    <div class="dim-layer layer-a"></div>
+                    <div class="dim-layer layer-b"></div>
+                    <div class="dim-layer layer-c"></div>
+                </div>
+                <div class="tile-content">
+                    <div class="photo-singularity">
+                        <img src="images/WhatsApp Image 2026-02-12 at 12.02.56 AM.jpeg" alt="Kareh - Celestial" class="photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="background: radial-gradient(circle at 60% 40%, #4cc9f0, #4361ee, #3a0ca3, #7209b7); display: none;">
+                            <span>KAREH.COSMIC</span>
+                        </div>
+                    </div>
+                    <div class="tile-info">
+                        <h3>REALITY: COSMIC</h3>
+                        <p>She contains multitudes. Galaxies in her eyes.</p>
+                        <div class="reality-sigil">✧</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 9: THE INFINITE -->
+            <div class="reality-tile" data-reality="infinite">
+                <div class="tile-dimensions">
+                    <div class="dim-layer layer-a"></div>
+                    <div class="dim-layer layer-b"></div>
+                    <div class="dim-layer layer-c"></div>
+                </div>
+                <div class="tile-content">
+                    <div class="photo-singularity">
+                        <img src="images/WhatsApp Image 2026-02-12 at 12.02.57 AM.jpeg" alt="Kareh - Infinite" class="photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="background: conic-gradient(from 0deg, #ff006e, #8338ec, #3a86ff, #06ffa5, #ffbe0b, #ff006e); display: none;">
+                            <span>KAREH.INFINITE</span>
+                        </div>
+                    </div>
+                    <div class="tile-info">
+                        <h3>REALITY: INFINITE</h3>
+                        <p>All possibilities. All versions. All love.</p>
+                        <div class="reality-sigil">∞</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 10: THE DIVINE -->
+            <div class="reality-tile" data-reality="divine">
+                <div class="tile-dimensions">
+                    <div class="dim-layer layer-a"></div>
+                    <div class="dim-layer layer-b"></div>
+                    <div class="dim-layer layer-c"></div>
+                </div>
+                <div class="tile-content">
+                    <div class="photo-singularity">
+                        <img src="images/WhatsApp Image 2026-02-12 at 12.02.58 AM.jpeg" alt="Kareh - Divine" class="photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="background: radial-gradient(circle at 50% 50%, #f72585, #7209b7, #3a0ca3); display: none;">
+                            <span>KAREH.DIVINE</span>
+                        </div>
+                    </div>
+                    <div class="tile-info">
+                        <h3>REALITY: DIVINE</h3>
+                        <p>A blessing from above. Pure grace incarnate.</p>
+                        <div class="reality-sigil">✧</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 11: THE RADIANT -->
+            <div class="reality-tile" data-reality="radiant">
+                <div class="tile-dimensions">
+                    <div class="dim-layer layer-a"></div>
+                    <div class="dim-layer layer-b"></div>
+                    <div class="dim-layer layer-c"></div>
+                </div>
+                <div class="tile-content">
+                    <div class="photo-singularity">
+                        <img src="images/WhatsApp Image 2026-02-12 at 12.02.59 AM.jpeg" alt="Kareh - Radiant" class="photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="background: radial-gradient(circle at 30% 30%, #ffd60a, #ff9e00, #ff006e); display: none;">
+                            <span>KAREH.RADIANT</span>
+                        </div>
+                    </div>
+                    <div class="tile-info">
+                        <h3>REALITY: RADIANT</h3>
+                        <p>She glows from within. Light follows her path.</p>
+                        <div class="reality-sigil">☉</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 12: THE VELVET -->
+            <div class="reality-tile" data-reality="velvet">
+                <div class="tile-dimensions">
+                    <div class="dim-layer layer-a"></div>
+                    <div class="dim-layer layer-b"></div>
+                    <div class="dim-layer layer-c"></div>
+                </div>
+                <div class="tile-content">
+                    <div class="photo-singularity">
+                        <img src="images/WhatsApp Image 2026-02-12 at 12.03.00 AM.jpeg" alt="Kareh - Velvet" class="photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="background: radial-gradient(circle at 50% 50%, #9d0208, #dc2f02, #e85d04); display: none;">
+                            <span>KAREH.VELVET</span>
+                        </div>
+                    </div>
+                    <div class="tile-info">
+                        <h3>REALITY: VELVET</h3>
+                        <p>Soft yet powerful. Gentle yet fierce.</p>
+                        <div class="reality-sigil">♥</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 13: THE MYSTIC -->
+            <div class="reality-tile" data-reality="mystic">
+                <div class="tile-dimensions">
+                    <div class="dim-layer layer-a"></div>
+                    <div class="dim-layer layer-b"></div>
+                    <div class="dim-layer layer-c"></div>
+                </div>
+                <div class="tile-content">
+                    <div class="photo-singularity">
+                        <img src="images/WhatsApp Image 2026-02-12 at 12.03.01 AM.jpeg" alt="Kareh - Mystic" class="photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="background: radial-gradient(circle at 40% 60%, #480ca8, #3a0ca3, #4cc9f0); display: none;">
+                            <span>KAREH.MYSTIC</span>
+                        </div>
+                    </div>
+                    <div class="tile-info">
+                        <h3>REALITY: MYSTIC</h3>
+                        <p>Secrets of the universe whispered to her soul.</p>
+                        <div class="reality-sigil">◈</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 14: THE DAZZLE -->
+            <div class="reality-tile" data-reality="dazzle">
+                <div class="tile-dimensions">
+                    <div class="dim-layer layer-a"></div>
+                    <div class="dim-layer layer-b"></div>
+                    <div class="dim-layer layer-c"></div>
+                </div>
+                <div class="tile-content">
+                    <div class="photo-singularity">
+                        <img src="images/WhatsApp Image 2026-02-12 at 12.03.03 AM.jpeg" alt="Kareh - Dazzle" class="photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="background: radial-gradient(circle at 60% 40%, #ffba08, #ff9e00, #ffc300); display: none;">
+                            <span>KAREH.DAZZLE</span>
+                        </div>
+                    </div>
+                    <div class="tile-info">
+                        <h3>REALITY: DAZZLE</h3>
+                        <p>Eyes that sparkle. A smile that blinds.</p>
+                        <div class="reality-sigil">✦</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 15: THE SERENITY -->
+            <div class="reality-tile" data-reality="serenity">
+                <div class="tile-dimensions">
+                    <div class="dim-layer layer-a"></div>
+                    <div class="dim-layer layer-b"></div>
+                    <div class="dim-layer layer-c"></div>
+                </div>
+                <div class="tile-content">
+                    <div class="photo-singularity">
+                        <img src="images/WhatsApp Image 2026-02-12 at 12.03.04 AM.jpeg" alt="Kareh - Serenity" class="photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="background: radial-gradient(circle at 50% 50%, #a8dadc, #457b9d, #1d3557); display: none;">
+                            <span>KAREH.SERENITY</span>
+                        </div>
+                    </div>
+                    <div class="tile-info">
+                        <h3>REALITY: SERENITY</h3>
+                        <p>Peace in motion. Calm in chaos.</p>
+                        <div class="reality-sigil">☽</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 16: THE PASSION -->
+            <div class="reality-tile" data-reality="passion">
+                <div class="tile-dimensions">
+                    <div class="dim-layer layer-a"></div>
+                    <div class="dim-layer layer-b"></div>
+                    <div class="dim-layer layer-c"></div>
+                </div>
+                <div class="tile-content">
+                    <div class="photo-singularity">
+                        <img src="images/WhatsApp Image 2026-02-12 at 12.03.05 AM.jpeg" alt="Kareh - Passion" class="photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="background: radial-gradient(circle at 50% 50%, #d00000, #9d0208, #ffba08); display: none;">
+                            <span>KAREH.PASSION</span>
+                        </div>
+                    </div>
+                    <div class="tile-info">
+                        <h3>REALITY: PASSION</h3>
+                        <p>Fire in her heart. Flame in her spirit.</p>
+                        <div class="reality-sigil">🔥</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 17: THE DAWN -->
+            <div class="reality-tile" data-reality="dawn">
+                <div class="tile-dimensions">
+                    <div class="dim-layer layer-a"></div>
+                    <div class="dim-layer layer-b"></div>
+                    <div class="dim-layer layer-c"></div>
+                </div>
+                <div class="tile-content">
+                    <div class="photo-singularity">
+                        <img src="images/WhatsApp Image 2026-02-12 at 12.03.07 AM.jpeg" alt="Kareh - Dawn" class="photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="background: radial-gradient(circle at 50% 20%, #ffba08, #ff9e00, #ff006e); display: none;">
+                            <span>KAREH.DAWN</span>
+                        </div>
+                    </div>
+                    <div class="tile-info">
+                        <h3>REALITY: DAWN</h3>
+                        <p>New beginnings. Endless possibilities.</p>
+                        <div class="reality-sigil">🌅</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 18: THE TWILIGHT -->
+            <div class="reality-tile" data-reality="twilight">
+                <div class="tile-dimensions">
+                    <div class="dim-layer layer-a"></div>
+                    <div class="dim-layer layer-b"></div>
+                    <div class="dim-layer layer-c"></div>
+                </div>
+                <div class="tile-content">
+                    <div class="photo-singularity">
+                        <img src="images/WhatsApp Image 2026-02-12 at 12.03.08 AM.jpeg" alt="Kareh - Twilight" class="photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="background: radial-gradient(circle at 50% 80%, #3a0ca3, #480ca8, #7209b7); display: none;">
+                            <span>KAREH.TWILIGHT</span>
+                        </div>
+                    </div>
+                    <div class="tile-info">
+                        <h3>REALITY: TWILIGHT</h3>
+                        <p>Magic between worlds. Beauty in shadows.</p>
+                        <div class="reality-sigil">🌙</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 19: THE AURORA -->
+            <div class="reality-tile" data-reality="aurora">
+                <div class="tile-dimensions">
+                    <div class="dim-layer layer-a"></div>
+                    <div class="dim-layer layer-b"></div>
+                    <div class="dim-layer layer-c"></div>
+                </div>
+                <div class="tile-content">
+                    <div class="photo-singularity">
+                        <img src="images/WhatsApp Image 2026-02-12 at 12.03.10 AM.jpeg" alt="Kareh - Aurora" class="photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="background: linear-gradient(135deg, #4cc9f0, #4361ee, #7209b7, #f72585); display: none;">
+                            <span>KAREH.AURORA</span>
+                        </div>
+                    </div>
+                    <div class="tile-info">
+                        <h3>REALITY: AURORA</h3>
+                        <p>Northern lights dance in her honor.</p>
+                        <div class="reality-sigil">✨</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 20: THE ETERNAL -->
+            <div class="reality-tile" data-reality="eternal">
+                <div class="tile-dimensions">
+                    <div class="dim-layer layer-a"></div>
+                    <div class="dim-layer layer-b"></div>
+                    <div class="dim-layer layer-c"></div>
+                </div>
+                <div class="tile-content">
+                    <div class="photo-singularity">
+                        <img src="images/WhatsApp Image 2026-02-12 at 12.03.13 AM.jpeg" alt="Kareh - Eternal" class="photo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder" style="background: conic-gradient(from 0deg, #f72585, #7209b7, #3a0ca3, #4361ee, #4cc9f0, #06ffa5, #ff006e); display: none;">
+                            <span>KAREH.ETERNAL</span>
+                        </div>
+                    </div>
+                    <div class="tile-info">
+                        <h3>REALITY: ETERNAL</h3>
+                        <p>Time cannot contain her. Love defies all limits.</p>
+                        <div class="reality-sigil">∞</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: QUANTUM TRANSMISSION -->
+    <section id="transmission" class="dimensional-section transmission">
+        <div class="transmission-header">
+            <h2 class="section-cosmic-title">
+                <span class="cosmic-word">QUANTUM</span>
+                <span class="cosmic-glyph">◉</span>
+                <span class="cosmic-word">TRANSMISSION</span>
+            </h2>
+        </div>
+        
+        <div class="transmission-interface">
+            <div class="interface-holo">
+                <div class="holo-scanner"></div>
+                <div class="holo-scanner-bottom"></div>
+                <div class="holo-content">
+                    <div class="message-constellation">
+                        <div class="msg-star" style="--x:10%;--y:20%;--delay:0s">✦</div>
+                        <div class="msg-star" style="--x:80%;--y:10%;--delay:0.5s">✦</div>
+                        <div class="msg-star" style="--x:90%;--y:70%;--delay:1s">✦</div>
+                        <div class="msg-star" style="--x:20%;--y:80%;--delay:1.5s">✦</div>
+                    </div>
+                    
+                    <div class="transmission-message">
+                        <div class="msg-header">
+                            <span class="msg-from">FROM: ERIC</span>
+                            <span class="msg-to">TO: KAREH</span>
+                            <span class="msg-priority">PRIORITY: COSMIC</span>
+                        </div>
+                        
+                        <div class="msg-body" id="scrambleText">
+                        </div>
+                        
+                        <div class="msg-footer">
+                            <span class="msg-sigil">◉ E ♥ K ◉</span>
+                            <span class="msg-timestamp">TIMESTAMP: ETERNAL_NOW</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="transmission-beams">
+                <div class="beam beam-1"></div>
+                <div class="beam beam-2"></div>
+                <div class="beam beam-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: THE ETERNAL LOOP -->
+    <section id="eternity" class="dimensional-section eternity">
+        <div class="eternity-vortex">
+            <div class="vortex-layers">
+                <div class="vortex-layer layer-1"></div>
+                <div class="vortex-layer layer-2"></div>
+                <div class="vortex-layer layer-3"></div>
+                <div class="vortex-layer layer-4"></div>
+                <div class="vortex-layer layer-5"></div>
+            </div>
+            
+            <div class="eternity-content">
+                <h2 class="eternity-title">THIS IS NOT THE END</h2>
+                <p class="eternity-subtitle">It is the <span class="eternity-highlight">ETERNAL RETURN</span></p>
+                
+                <div class="love-equation">
+                    <span class="eq-variable">E</span>
+                    <span class="eq-operator">+</span>
+                    <span class="eq-variable">K</span>
+                    <span class="eq-operator">=</span>
+                    <span class="eq-result">∞</span>
+                </div>
+                
+                <div class="eternity-sigils">
+                    <div class="sigil-ring">
+                        <span>♥</span>
+                        <span>♥</span>
+                        <span>♥</span>
+                        <span>♥</span>
+                        <span>♥</span>
+                        <span>♥</span>
+                        <span>♥</span>
+                        <span>♥</span>
+                    </div>
+                </div>
+                
+                <div class="final-mantra">
+                    <span class="mantra-word" style="--i:1">FOREVER</span>
+                    <span class="mantra-word" style="--i:2">IS</span>
+                    <span class="mantra-word" style="--i:3">NOT</span>
+                    <span class="mantra-word" style="--i:4">LONG</span>
+                    <span class="mantra-word" style="--i:5">ENOUGH</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIMENSIONAL FOOTER -->
+    <footer class="cosmic-footer">
+        <div class="footer-singularity">
+            <div class="singularity-rings">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="footer-core">
+                <span class="footer-glyph">N</span>
+                <span class="footer-heart">♥</span>
+                <span class="footer-glyph">V</span>
+            </div>
+        </div>
+        <p class="footer-manifesto">Crafted across dimensions by Nelson for Vickie Mulla</p>
+        <p class="footer-coords">∞.∞.∞ | ETERNAL_NOW</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
