@@ -869,7 +869,7 @@ body {
 
 .reality-tile {
     position: relative;
-    height: 200px;
+    height: 380px;
     transform-style: preserve-3d;
     cursor: pointer;
     overflow: hidden;
@@ -933,8 +933,8 @@ body {
 .photo-singularity {
     position: relative;
     flex: 1;
-    min-height: 0;
-    height: 100%;
+    min-height: 200px;
+    height: calc(100% - 60px);
     overflow: hidden;
 }
 
@@ -1021,7 +1021,7 @@ body {
     }
     
     .reality-tile {
-        height: 250px;
+        height: 400px;
     }
 }
 
@@ -1045,7 +1045,7 @@ body {
     }
     
     .reality-tile {
-        height: 220px;
+        height: 380px;
     }
     
     .tile-info h3 {
@@ -1077,7 +1077,7 @@ body {
     }
     
     .reality-tile {
-        height: 200px;
+        height: 350px;
     }
     
     .trackpad {
@@ -1113,7 +1113,7 @@ body {
     }
     
     .reality-tile {
-        height: 150px;
+        height: 280px;
     }
     
     .camera-notch {
@@ -1861,7 +1861,7 @@ body {
     }
     
     .reality-tile {
-        height: 400px !important;
+        height: 450px !important;
     }
     
     .tile-info {
@@ -2044,7 +2044,7 @@ body {
     }
     
     .reality-tile {
-        height: 350px !important;
+        height: 400px !important;
     }
     
     .interface-holo {
