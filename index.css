@@ -1912,7 +1912,12 @@ body {
     }
     
     .reality-tile {
-        height: 450px !important;
+        height: 350px !important;
+    }
+    
+    .photo-singularity {
+        height: calc(100% - 80px) !important;
+        min-height: unset !important;
     }
     
     .tile-info {

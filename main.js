@@ -77,7 +77,7 @@ document.addEventListener('click', function handleFirstClick() {
     initAudio();
 }, { once: true });
 
-// Also handle crystal click
+// Handle crystal click for play/pause
 audioCrystal.addEventListener('click', () => {
     audioCrystal.classList.remove('waiting');
     
@@ -86,36 +86,19 @@ audioCrystal.addEventListener('click', () => {
         audioCrystal.classList.remove('playing');
         isPlaying = false;
     } else {
-        tryPlayAudio();
+        // Initialize audio context if not already done
+        if (!audioInitialized) {
+            initAudio();
+        }
+        audioContext.resume().then(() => {
+            audio.play();
+            audioCrystal.classList.add('playing');
+            isPlaying = true;
+            visualizeAudio();
+        }).catch(e => {
+            console.log('Audio play failed:', e);
+        });
     }
-});
-
-audioCrystal.addEventListener('click', async () => {
-    // Remove waiting class if present
-    audioCrystal.classList.remove('waiting');
-    
-    if (!audioContext) {
-        audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        analyser = audioContext.createAnalyser();
-        analyser.fftSize = 256;
-        
-        const source = audioContext.createMediaElementSource(audio);
-        source.connect(analyser);
-        analyser.connect(audioContext.destination);
-        
-        dataArray = new Uint8Array(analyser.frequencyBinCount);
-    }
-    
-    if (isPlaying) {
-        audio.pause();
-        audioCrystal.classList.remove('playing');
-    } else {
-        await audioContext.resume();
-        audio.play();
-        audioCrystal.classList.add('playing');
-        visualizeAudio();
-    }
-    isPlaying = !isPlaying;
 });
 
 // Touch support for mobile devices
