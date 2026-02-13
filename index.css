@@ -223,6 +223,15 @@ body {
     100% { transform: scale(1.5); opacity: 0; }
 }
 
+.crystal-audio.waiting {
+    animation: crystal-pulse 1s ease-in-out infinite;
+}
+
+@keyframes crystal-pulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(255, 0, 110, 0.5); }
+    50% { box-shadow: 0 0 40px rgba(255, 0, 110, 1); }
+}
+
 /* ============================================
    ENERGY BEAM SCROLL PROGRESS
    ============================================ */
@@ -1160,15 +1169,36 @@ body {
     right: 0;
     height: 2px;
     background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
-    animation: scanner-sweep 4s ease-in-out infinite;
+    animation: scanner-sweep 6s ease-in-out infinite;
     box-shadow: 0 0 20px var(--neon-cyan);
+    z-index: 10;
+}
+
+.holo-scanner-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+    animation: scanner-line-sweep 8s linear infinite;
+    box-shadow: 0 0 15px var(--neon-cyan), 0 0 30px var(--neon-cyan);
+    z-index: 5;
+    pointer-events: none;
 }
 
 @keyframes scanner-sweep {
-    0%, 100% { transform: translateY(0); opacity: 0; }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { transform: translateY(calc(100vh - 100px)); opacity: 0; }
+    0% { transform: translateY(0); opacity: 0; }
+    5% { opacity: 1; }
+    95% { opacity: 1; }
+    100% { transform: translateY(800px); opacity: 0; }
+}
+
+@keyframes scanner-line-sweep {
+    0% { top: 0; opacity: 0; }
+    5% { opacity: 1; }
+    95% { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
 }
 
 .holo-scanner-bottom {
@@ -1246,6 +1276,27 @@ body {
     font-size: 1.3rem;
     line-height: 2.2;
     color: rgba(255,255,255,0.9);
+}
+
+.msg-body p {
+    margin-bottom: 25px;
+    text-align: justify;
+    text-shadow: 0 0 10px rgba(255, 0, 110, 0.3);
+}
+
+.msg-body .valentine-wish {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff006e;
+    text-shadow: 0 0 20px rgba(255, 0, 110, 0.8);
+    margin-top: 40px;
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { opacity: 1; text-shadow: 0 0 20px rgba(255, 0, 110, 0.8); }
+    50% { opacity: 0.8; text-shadow: 0 0 40px rgba(255, 0, 110, 1); }
 }
 
 .msg-line {

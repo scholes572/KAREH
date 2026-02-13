@@ -15,10 +15,15 @@ const visualizerCtx = visualizerCanvas.getContext('2d');
 
 let audioContext, analyser, dataArray;
 let isPlaying = false;
+let audioInitialized = false;
+let startTime = null;
 
-// Auto-play when page loads
-window.addEventListener('load', async () => {
-    try {
+// Preload audio
+audio.preload = 'auto';
+
+// Initialize audio context and visualizer
+function initAudio() {
+    if (!audioInitialized) {
         audioContext = new (window.AudioContext || window.webkitAudioContext)();
         analyser = audioContext.createAnalyser();
         analyser.fftSize = 256;
@@ -28,18 +33,67 @@ window.addEventListener('load', async () => {
         analyser.connect(audioContext.destination);
         
         dataArray = new Uint8Array(analyser.frequencyBinCount);
-        
-        await audioContext.resume();
-        await audio.play();
+        audioInitialized = true;
+    }
+    return audioContext;
+}
+
+// Try to play audio
+function tryPlayAudio() {
+    initAudio();
+    audioContext.resume().then(() => {
+        audio.play();
         audioCrystal.classList.add('playing');
         isPlaying = true;
         visualizeAudio();
-    } catch (e) {
-        console.log('Auto-play blocked. User interaction required.');
+    }).catch(e => {
+        console.log('Audio play failed:', e);
+    });
+}
+
+// Start 10-second countdown on page load
+window.addEventListener('load', () => {
+    startTime = Date.now();
+    console.log('Auto-play timer started. Music will play in 10 seconds...');
+    
+    // Set timeout for 10 seconds
+    setTimeout(() => {
+        if (!isPlaying) {
+            tryPlayAudio();
+        }
+    }, 10000);
+});
+
+// Handle first click anywhere - play immediately if within 10 seconds
+document.addEventListener('click', function handleFirstClick() {
+    document.removeEventListener('click', handleFirstClick);
+    
+    // If 10 seconds haven't passed yet, play immediately
+    if (startTime !== null && Date.now() - startTime < 10000 && !isPlaying) {
+        tryPlayAudio();
+    }
+    
+    // Initialize audio context for future use
+    initAudio();
+}, { once: true });
+
+// Also handle crystal click
+audioCrystal.addEventListener('click', () => {
+    audioCrystal.classList.remove('waiting');
+    
+    if (isPlaying) {
+        audio.pause();
+        audioCrystal.classList.remove('playing');
+        isPlaying = false;
+    } else {
+        tryPlayAudio();
     }
 });
 
 audioCrystal.addEventListener('click', async () => {
+    // Remove waiting class if present
+    audioCrystal.classList.remove('waiting');
+    
     if (!audioContext) {
         audioContext = new (window.AudioContext || window.webkitAudioContext)();
         analyser = audioContext.createAnalyser();
